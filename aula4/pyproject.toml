@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "aula4"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+reame = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+program = "src.cli:run"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
