@@ -4,5 +4,5 @@ install:
 	poetry install
 
 
-run.jorge:
+run.luis:
 	python3 cli.py tototo
