@@ -26,18 +26,18 @@ def add(name):
             else:
                 items[item] = 1
 
+    if name in items:
+        count = items[name] + 1
+        items[name] = count
+        print(f"Item '{name}' already exists. Counter incremented to {count}.")
+    else:
+        count = 1
+        items[name] = count
+        print(f"Item added: {name}")
+
     with open(filename, 'w') as file:
-        if name in items:
-            count = items[name] + 1
-            items[name] = count
-        else:
-            count = 1
         for item, count in items.items():
             file.write(f"{item} ({count})\n")
-        if name not in items:
-            print(f"Item added: {name}")
-        else:
-            print(f"Item '{name}' already exists. Counter incremented to {count}.")
 
 @cli.command()
 @click.argument("name")
@@ -46,27 +46,26 @@ def rm(name):
     with open(filename, 'r') as file:
         for line in file:
             item = line.strip()
-            if '(' in item: 
+            if '(' in item:
                 item_name, count = item.split(' (')
                 count = int(count[:-1])
                 items[item_name] = count
             else:
                 items[item] = 1
 
-    with open(filename, 'w') as file:
-        if name in items:
-            count = items[name]
-            if count > 1:
-                items[name] -= 1
-                for item, count in items.items():
-                    file.write(f"{item} ({count})\n")
-            else:
-                del items[name]
-                for item, count in items.items():
-                    file.write(f"{item}\n") 
-            print(f"Item removed: {name}")
+    if name in items:
+        count = items[name]
+        if count > 1:
+            items[name] -= 1
         else:
-            print(f"Item '{name}' not found.")
+            del items[name]
+
+        with open(filename, 'w') as file:
+            for item, count in items.items():
+                file.write(f"{item} ({count})\n")
+        print(f"Item removed: {name}")
+    else:
+        print(f"Item '{name}' not found.")
 
 if __name__ == "__main__":
     cli()
