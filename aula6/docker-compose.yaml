@@ -1,0 +1,8 @@
+version: "latest"
+services:
+  bot:
+  build:
+    context: .
+    dockerfile: dockerfile
+  volumes:
+    - .:/workspace
