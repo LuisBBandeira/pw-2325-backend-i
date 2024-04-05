@@ -1,10 +1,8 @@
 
-
-
 docker.build:
 	docker-compose build --force-rm
 
-docker.start:
+docker.run:
 	docker-compose up -d
 
 install: 

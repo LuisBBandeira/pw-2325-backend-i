@@ -1,8 +1,9 @@
 version: "latest"
 services:
   bot:
-  build:
-    context: .
-    dockerfile: dockerfile
-  volumes:
-    - .:/workspace
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+    env_file: .env

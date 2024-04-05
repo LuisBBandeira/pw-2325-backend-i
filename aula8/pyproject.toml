@@ -1,21 +1,23 @@
 [tool.poetry]
-name = "bot etic"
+name = "eticgpt"
 version = "0.1.0"
-description = "Bot ping pong"
+description = "Discord Bot 2.0"
 authors = ["LuisBBandeira <luisfilipebentobandeira@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [
-  { include = "eticbot/*.py" }
-]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10.12"
 click = "^8.1.7"
 py-cord = "^2.5.0"
+requests = "^2.31.0"
+pydantic = "^2.6.4"
 
-[tool.poetry.scripts]
-bot = "eticbot.app:bot"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+ruff = "^0.3.5"
+black = "^24.3.0"
 
 [build-system]
 requires = ["poetry-core"]

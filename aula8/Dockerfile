@@ -1,4 +1,4 @@
-FROM python:3-alpine
+FROM python:3-slim
 
 RUN pip install poetry
 
@@ -6,8 +6,8 @@ RUN poetry config virtualenvs.create false
 
 WORKDIR /workspace
 
-COPY . /workspace
+COPY . .
 
 RUN poetry install
 
-CMD poetry run python eticbot/app.py start
+CMD CLI start

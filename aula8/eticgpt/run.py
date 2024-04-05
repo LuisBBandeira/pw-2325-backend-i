@@ -6,8 +6,9 @@ def bot():
     pass
 
 @bot.command()
-def start():
-    etic_bot.client.start("TOKEN Here") 
+@click.Option('--token',show_envvar="BOT_TOKEN")
+def run(token:str):
+    etic_bot.client.run(token) 
 
 
 if __name__ == "__main__":
