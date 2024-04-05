@@ -7,11 +7,10 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.10.12"
 click = "^8.1.7"
 py-cord = "^2.5.0"
 requests = "^2.31.0"
-discord = "^2.3.2"
 pydantic = "^2.6.4"
 
 

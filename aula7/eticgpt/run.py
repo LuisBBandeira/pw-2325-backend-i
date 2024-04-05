@@ -1,7 +1,8 @@
-import click
+from typing import Literal
+from pydantic import BaseModel
 
+class OllamaPrompt(BaseModel):
 
-
-@click.group()
-def bot():
-    pass
+    model: Literal["gemma"]
+    prompt: str
+    stream: bool = False 

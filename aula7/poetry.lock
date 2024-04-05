@@ -333,40 +333,6 @@ files = [
 ]
 
 [[package]]
-name = "discord"
-version = "2.3.2"
-description = "A mirror package for discord.py. Please install that instead."
-optional = false
-python-versions = "*"
-files = [
-    {file = "discord-2.3.2-py3-none-any.whl", hash = "sha256:d7959418799dd3b1e896685812d880169c193468b061b3431fa2a4664febd3da"},
-    {file = "discord-2.3.2.tar.gz", hash = "sha256:cc1ee2dbe6df218ca51519af355b97e87309f8230f58c7f34885feb8e8a76145"},
-]
-
-[package.dependencies]
-"discord.py" = ">=2.3.2"
-
-[[package]]
-name = "discord-py"
-version = "2.3.2"
-description = "A Python wrapper for the Discord API"
-optional = false
-python-versions = ">=3.8.0"
-files = [
-    {file = "discord.py-2.3.2-py3-none-any.whl", hash = "sha256:9da4679fc3cb10c64b388284700dc998663e0e57328283bbfcfc2525ec5960a6"},
-    {file = "discord.py-2.3.2.tar.gz", hash = "sha256:4560f70f2eddba7e83370ecebd237ac09fbb4980dc66507482b0c0e5b8f76b9c"},
-]
-
-[package.dependencies]
-aiohttp = ">=3.7.4,<4"
-
-[package.extras]
-docs = ["sphinx (==4.4.0)", "sphinxcontrib-trio (==1.1.2)", "sphinxcontrib-websupport", "typing-extensions (>=4.3,<5)"]
-speed = ["Brotli", "aiodns (>=1.1)", "cchardet (==2.1.7)", "orjson (>=3.5.4)"]
-test = ["coverage[toml]", "pytest", "pytest-asyncio", "pytest-cov", "pytest-mock", "typing-extensions (>=4.3,<5)"]
-voice = ["PyNaCl (>=1.3.0,<1.6)"]
-
-[[package]]
 name = "exceptiongroup"
 version = "1.2.0"
 description = "Backport of PEP 654 (exception groups)"
@@ -862,13 +828,13 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.10.0"
+version = "4.11.0"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.10.0-py3-none-any.whl", hash = "sha256:69b1a937c3a517342112fb4c6df7e72fc39a38e7891a5730ed4985b5214b5475"},
-    {file = "typing_extensions-4.10.0.tar.gz", hash = "sha256:b0abd7c89e8fb96f98db18d86106ff1d90ab692004eb746cf6eda2682f91b3cb"},
+    {file = "typing_extensions-4.11.0-py3-none-any.whl", hash = "sha256:c1f94d72897edaf4ce775bb7558d5b79d8126906a14ea5ed1635921406c0387a"},
+    {file = "typing_extensions-4.11.0.tar.gz", hash = "sha256:83f085bd5ca59c80295fc2a82ab5dac679cbe02b9f33f7d83af68e241bea51b0"},
 ]
 
 [[package]]
@@ -993,5 +959,5 @@ multidict = ">=4.0"
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "87d20de5440c3cbfdc71859872e18a722182a6de5cb63c1a8d69bf13baf1d4d0"
+python-versions = "^3.10.12"
+content-hash = "526b5f19906d8a0763414f9c78031f8cde8c2163430976919de5641364535874"

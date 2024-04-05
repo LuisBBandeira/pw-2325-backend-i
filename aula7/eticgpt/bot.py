@@ -1,9 +1,10 @@
 import discord
 from discord.message import Message
 
-intends= discord.Intends.default()
 
-client = discord.Client(intends=intends)
+intents= discord.Intents.default()
+
+client = discord.Client(intents=intents)
 
 
 @client.event

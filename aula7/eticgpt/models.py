@@ -1,7 +1,16 @@
-from pydantic import BaseModel
+import click
 
-class OllamaPrompt(BaseModel)
 
-    model: Literal("gemma")
-    prompt: str
-    stream:bool = False
+
+@click.group()
+def bot():
+    pass
+
+
+@bot.command()
+def run():
+    gpt_bot.start()
+
+
+if __name__ == "__main__":
+    bot()
