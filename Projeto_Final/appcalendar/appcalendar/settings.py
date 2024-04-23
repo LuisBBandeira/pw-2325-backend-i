@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-l14&wr@84@w!6ap^oz+vcx2x_4e-x^6!^ufg7+$vhw4isxa9a*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "cal"
 ]
 
 MIDDLEWARE = [
